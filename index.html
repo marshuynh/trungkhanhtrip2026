@@ -1,117 +1,882 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trùng Khánh 2026 🇨🇳</title>
 <style>
-:root{--bg:#EFF3FA;--white:#FFF;--blue:#1855D1;--blue-mid:#2563EB;--blue-soft:#EEF3FF;--blue-border:#C7D9FF;--green:#0A7A4A;--green-soft:#E8F7F0;--green-border:#A3DFC3;--purple:#6427C2;--purple-soft:#F1ECFF;--purple-border:#C9B8FF;--amber:#A05500;--amber-soft:#FFF5E6;--amber-border:#FBBF72;--slate:#1E2D40;--slate-mid:#334155;--gray:#64748B;--gray-light:#F1F5F9;--gray-border:#E2E8F0;--text:#0F1E30;--r:16px;--rs:10px;--sh:0 1px 4px rgba(0,0,0,.06),0 3px 12px rgba(0,0,0,.04)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.65;-webkit-font-smoothing:antialiased}
-.hero{background:linear-gradient(150deg,#0C2D70 0%,#1855D1 45%,#2081C3 100%);color:#fff;padding:40px 20px 56px;text-align:center;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:28px;background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%)}
-.hero-flag{font-size:40px;margin-bottom:8px;display:block}.hero h1{font-size:26px;font-weight:800;letter-spacing:-.4px;margin-bottom:5px}.hero-dates{font-size:13px;opacity:.8;margin-bottom:24px}
-.hero-stats{display:flex;justify-content:center;gap:28px;flex-wrap:wrap}.stat{display:flex;flex-direction:column;align-items:center}.stat-num{font-size:24px;font-weight:800;line-height:1}.stat-lbl{font-size:10px;opacity:.65;text-transform:uppercase;letter-spacing:1px;margin-top:3px}
-.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-border);overflow-x:auto;scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}.nav-inner{display:flex;gap:2px;padding:8px 12px;min-width:max-content}
-.nav-link{padding:6px 13px;border-radius:20px;font-size:13px;font-weight:500;text-decoration:none;color:var(--gray);white-space:nowrap;transition:all .15s}.nav-link:hover{background:var(--blue-soft);color:var(--blue)}
-.wrap{max-width:860px;margin:0 auto;padding:24px 16px 72px}
-section{margin-bottom:34px;scroll-margin-top:52px}
-.sec-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--blue-soft);display:flex;align-items:center;gap:7px}
-.grid-2{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:560px){.grid-2{grid-template-columns:1fr 1fr}}
-.bp{background:var(--white);border-radius:var(--r);border:1px solid var(--gray-border);box-shadow:var(--sh);overflow:hidden}
-.bp-head{padding:9px 16px 8px;font-size:11px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:6px}
-.bp-head.flight{background:var(--blue-mid)}.bp-head.train{background:var(--purple)}
-.bp-body{display:flex;align-items:center;padding:16px 16px 10px}.bp-side{flex:1;text-align:center}
-.bp-code{font-size:28px;font-weight:800;letter-spacing:-1.5px;line-height:1;color:var(--text)}.bp-code-sm{font-size:13px;font-weight:700;line-height:1.4;color:var(--text)}.bp-city{font-size:11px;color:var(--gray);margin-top:4px}
-.bp-arrow-wrap{padding:0 10px;display:flex;flex-direction:column;align-items:center;gap:3px}.bp-time{font-size:17px;font-weight:700}.bp-time.blue{color:var(--blue)}.bp-time.purple{color:var(--purple)}
-.bp-arrow-line{width:56px;height:1px;background:linear-gradient(to right,transparent,var(--gray-border),transparent);margin:2px 0}.bp-arrow-tip{font-size:14px;color:var(--gray)}
-.bp-divider{border:none;border-top:1px dashed var(--gray-border);margin:0 16px}.bp-foot{display:flex;gap:20px;padding:10px 16px 14px}.bp-fi{display:flex;flex-direction:column}.bp-fl{font-size:10px;color:var(--gray);text-transform:uppercase;letter-spacing:.5px}.bp-fv{font-size:12px;font-weight:600;margin-top:2px}
-.hotel{background:var(--white);border-radius:var(--r);border:1px solid var(--gray-border);box-shadow:var(--sh);overflow:hidden}.hotel-head{padding:13px 16px;background:var(--slate);color:#fff}.hotel-name{font-size:13px;font-weight:700;line-height:1.4}.hotel-loc{font-size:11px;opacity:.6;margin-top:3px}.hotel-body{padding:13px 16px}.hotel-row{display:flex;gap:8px;margin-bottom:7px}.hotel-lbl{min-width:68px;font-size:11px;color:var(--gray);font-weight:600;padding-top:1px}.hotel-val{font-size:13px;font-weight:500}.hotel-note{font-size:12px;color:var(--gray)}
-.day{background:var(--white);border-radius:var(--r);border:1px solid var(--gray-border);box-shadow:var(--sh);overflow:hidden;margin-bottom:10px}
-.day-head{display:flex;align-items:center;gap:10px;padding:13px 16px;cursor:pointer;user-select:none}
-.day-head.city{background:linear-gradient(125deg,#1855D1,#1340A8);color:#fff}.day-head.nature{background:linear-gradient(125deg,#0A7A4A,#065C36);color:#fff}.day-head.travel{background:linear-gradient(125deg,#253B55,#334E6B);color:#fff}
-.day-pill{font-size:11px;font-weight:800;padding:3px 9px;border-radius:8px;background:rgba(255,255,255,.2);letter-spacing:.3px}.day-meta{flex:1}.day-date{font-size:13px;font-weight:700;line-height:1.3}.day-desc{font-size:11px;opacity:.72;margin-top:1px}.day-tag{font-size:11px;padding:2px 9px;border-radius:8px;background:rgba(255,255,255,.15);font-weight:500;white-space:nowrap}
-.chevron{font-size:14px;opacity:.7;transition:transform .2s;flex-shrink:0}.chevron.open{transform:rotate(180deg)}
-.day-body{padding:14px 16px;border-top:1px solid var(--gray-border);display:none}.day-body.on{display:block}
-.session{display:flex;gap:10px;margin-bottom:11px}.session:last-of-type{margin-bottom:0}.sess-lbl{min-width:50px;font-size:11px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.4px;padding-top:4px}.sess-tags{flex:1;display:flex;flex-wrap:wrap;gap:5px}
-.tag{display:inline-flex;align-items:center;padding:4px 10px;border-radius:16px;font-size:12px;font-weight:500;line-height:1.4}
-.tag.city{background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-border)}.tag.nature{background:var(--green-soft);color:var(--green);border:1px solid var(--green-border)}.tag.travel{background:var(--purple-soft);color:var(--purple);border:1px solid var(--purple-border)}.tag.food{background:var(--amber-soft);color:var(--amber);border:1px solid var(--amber-border)}.tag.tbc{background:var(--gray-light);color:var(--gray);border:1px solid var(--gray-border)}
-.ks-chip{display:flex;align-items:center;gap:7px;margin-top:11px;padding:8px 12px;border-radius:var(--rs);background:var(--gray-light);font-size:12px;color:var(--slate-mid);border-top:1px dashed var(--gray-border)}
-.prep-grid{display:grid;grid-template-columns:1fr;gap:12px}@media(min-width:580px){.prep-grid{grid-template-columns:1fr 1fr}}
-.prep-card{background:var(--white);border-radius:var(--r);border:1px solid var(--gray-border);box-shadow:var(--sh);overflow:hidden}
-.prep-head{padding:12px 16px;font-size:13px;font-weight:700;background:var(--gray-light);border-bottom:1px solid var(--gray-border);cursor:pointer;user-select:none;display:flex;justify-content:space-between;align-items:center}
-.prep-body{padding:4px 16px 12px;display:none}.prep-body.on{display:block}
-.ci{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--gray-light);font-size:13px;align-items:flex-start}.ci:last-child{border-bottom:none}.ci-icon{flex-shrink:0;margin-top:1px}
-.tips-list{display:flex;flex-direction:column;gap:8px;margin-top:16px}.tip{display:flex;gap:10px;align-items:flex-start;background:var(--white);border-radius:var(--rs);border:1px solid var(--gray-border);padding:11px 14px;font-size:13px}.tip-icon{font-size:20px;flex-shrink:0;line-height:1.3}
-.budget-card{background:var(--white);border-radius:var(--r);border:1px solid var(--gray-border);box-shadow:var(--sh);overflow:hidden}
-.budget-table{width:100%;border-collapse:collapse}.budget-table th{text-align:left;padding:10px 14px;background:var(--gray-light);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--gray);font-weight:700;border-bottom:1px solid var(--gray-border)}
-.budget-table td{padding:10px 14px;border-bottom:1px solid var(--gray-light);font-size:13px}
-.budget-table tr.total td{font-weight:700;background:var(--blue-soft);border-top:2px solid var(--blue-border);color:var(--blue);border-bottom:none}
-.price{font-weight:700;font-size:13px;color:var(--text)}.note{font-size:12px;color:var(--gray)}
-.footer{text-align:center;padding:20px;font-size:11px;color:var(--gray)}
-@media(min-width:768px){.hero{padding:52px 24px 68px}.hero h1{font-size:32px}.wrap{padding:28px 24px 72px}}
+/* ============================
+   DESIGN TOKENS
+   ============================ */
+:root {
+  --bg: #EFF3FA;
+  --white: #FFFFFF;
+  --blue: #1855D1;
+  --blue-mid: #2563EB;
+  --blue-soft: #EEF3FF;
+  --blue-border: #C7D9FF;
+  --green: #0A7A4A;
+  --green-soft: #E8F7F0;
+  --green-border: #A3DFC3;
+  --purple: #6427C2;
+  --purple-soft: #F1ECFF;
+  --purple-border: #C9B8FF;
+  --amber: #A05500;
+  --amber-soft: #FFF5E6;
+  --amber-border: #FBBF72;
+  --slate: #1E2D40;
+  --slate-mid: #334155;
+  --gray: #64748B;
+  --gray-light: #F1F5F9;
+  --gray-border: #E2E8F0;
+  --text: #0F1E30;
+  --radius-lg: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 4px rgba(0,0,0,0.06), 0 3px 12px rgba(0,0,0,0.04);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================
+   HERO
+   ============================ */
+.hero {
+  background: linear-gradient(150deg, #0C2D70 0%, #1855D1 45%, #2081C3 100%);
+  color: #fff;
+  padding: 48px 20px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -1px; left: 0; right: 0; height: 32px;
+  background: var(--bg);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+.hero-flag { font-size: 42px; margin-bottom: 10px; display: block; }
+.hero h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 6px; }
+.hero-dates { font-size: 14px; opacity: 0.8; margin-bottom: 28px; }
+.hero-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.stat { display: flex; flex-direction: column; align-items: center; }
+.stat-num { font-size: 26px; font-weight: 800; line-height: 1; }
+.stat-lbl { font-size: 10px; opacity: 0.65; text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+
+/* ============================
+   STICKY NAV
+   ============================ */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray-border);
+  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.nav::-webkit-scrollbar { display: none; }
+.nav-inner { display: flex; gap: 2px; padding: 8px 14px; min-width: max-content; }
+.nav-link {
+  padding: 6px 14px; border-radius: 20px;
+  font-size: 13px; font-weight: 500;
+  text-decoration: none; color: var(--gray);
+  white-space: nowrap; transition: all 0.15s;
+}
+.nav-link:hover { background: var(--blue-soft); color: var(--blue); }
+
+/* ============================
+   LAYOUT
+   ============================ */
+.wrap { max-width: 860px; margin: 0 auto; padding: 28px 16px 80px; }
+section { margin-bottom: 36px; scroll-margin-top: 52px; }
+
+.sec-title {
+  font-size: 14px; font-weight: 700; color: var(--text);
+  margin-bottom: 14px; padding-bottom: 10px;
+  border-bottom: 2px solid var(--blue-soft);
+  display: flex; align-items: center; gap: 7px; letter-spacing: 0.1px;
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 560px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+/* ============================
+   BOARDING PASS
+   ============================ */
+.bp {
+  background: var(--white); border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-border); box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.bp-head {
+  padding: 9px 16px 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+  text-transform: uppercase; color: #fff;
+  display: flex; align-items: center; gap: 6px;
+}
+.bp-head.flight { background: var(--blue-mid); }
+.bp-head.train  { background: var(--purple); }
+
+.bp-body { display: flex; align-items: center; padding: 16px 16px 10px; }
+.bp-side { flex: 1; text-align: center; }
+.bp-code { font-size: 28px; font-weight: 800; letter-spacing: -1.5px; line-height: 1; color: var(--text); }
+.bp-code-sm { font-size: 14px; font-weight: 700; line-height: 1.3; color: var(--text); }
+.bp-city { font-size: 11px; color: var(--gray); margin-top: 4px; }
+.bp-arrow-wrap { padding: 0 10px; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.bp-time { font-size: 17px; font-weight: 700; }
+.bp-time.blue { color: var(--blue); }
+.bp-time.purple { color: var(--purple); }
+.bp-arrow-line { width: 56px; height: 1px; background: linear-gradient(to right, transparent, var(--gray-border), transparent); margin: 2px 0; }
+.bp-arrow-tip { font-size: 14px; color: var(--gray); }
+
+.bp-divider { border: none; border-top: 1px dashed var(--gray-border); margin: 0 16px; }
+.bp-foot { display: flex; gap: 20px; padding: 10px 16px 14px; }
+.bp-fi { display: flex; flex-direction: column; }
+.bp-fl { font-size: 10px; color: var(--gray); text-transform: uppercase; letter-spacing: 0.5px; }
+.bp-fv { font-size: 12px; font-weight: 600; margin-top: 2px; }
+
+/* ============================
+   HOTEL CARDS
+   ============================ */
+.hotel {
+  background: var(--white); border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-border); box-shadow: var(--shadow); overflow: hidden;
+}
+.hotel-head {
+  padding: 13px 16px;
+  background: var(--slate); color: #fff;
+}
+.hotel-name { font-size: 13px; font-weight: 700; line-height: 1.4; }
+.hotel-loc { font-size: 11px; opacity: 0.6; margin-top: 3px; }
+.hotel-body { padding: 13px 16px; }
+.hotel-row { display: flex; gap: 8px; margin-bottom: 7px; }
+.hotel-lbl { min-width: 68px; font-size: 11px; color: var(--gray); font-weight: 600; padding-top: 1px; }
+.hotel-val { font-size: 13px; font-weight: 500; }
+.hotel-note { font-size: 12px; color: var(--gray); }
+
+/* ============================
+   DAY CARDS
+   ============================ */
+.day {
+  background: var(--white); border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-border); box-shadow: var(--shadow);
+  overflow: hidden; margin-bottom: 12px;
+}
+.day-head {
+  display: flex; align-items: center; gap: 10px;
+  padding: 13px 16px; cursor: pointer; user-select: none;
+}
+.day-head.city  { background: linear-gradient(125deg, #1855D1, #1340A8); color: #fff; }
+.day-head.nature{ background: linear-gradient(125deg, #0A7A4A, #065C36); color: #fff; }
+.day-head.travel{ background: linear-gradient(125deg, #253B55, #334E6B); color: #fff; }
+
+.day-pill { font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 8px; background: rgba(255,255,255,0.2); letter-spacing: 0.3px; }
+.day-meta { flex: 1; }
+.day-date { font-size: 13px; font-weight: 700; line-height: 1.3; }
+.day-desc { font-size: 11px; opacity: 0.72; margin-top: 1px; }
+.day-tag { font-size: 11px; padding: 2px 9px; border-radius: 8px; background: rgba(255,255,255,0.15); font-weight: 500; white-space: nowrap; }
+.chevron { font-size: 14px; opacity: 0.7; transition: transform 0.2s; flex-shrink: 0; }
+.chevron.open { transform: rotate(180deg); }
+
+.day-body { padding: 14px 16px; border-top: 1px solid var(--gray-border); display: none; }
+.day-body.on { display: block; }
+
+.session { display: flex; gap: 10px; margin-bottom: 11px; }
+.session:last-of-type { margin-bottom: 0; }
+.sess-lbl { min-width: 50px; font-size: 11px; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 0.4px; padding-top: 4px; }
+.sess-tags { flex: 1; display: flex; flex-wrap: wrap; gap: 5px; }
+
+.tag { display: inline-flex; align-items: center; padding: 4px 10px; border-radius: 16px; font-size: 12px; font-weight: 500; line-height: 1.4; }
+.tag.city   { background: var(--blue-soft); color: var(--blue); border: 1px solid var(--blue-border); }
+.tag.nature { background: var(--green-soft); color: var(--green); border: 1px solid var(--green-border); }
+.tag.travel { background: var(--purple-soft); color: var(--purple); border: 1px solid var(--purple-border); }
+.tag.food   { background: var(--amber-soft); color: var(--amber); border: 1px solid var(--amber-border); }
+.tag.tbc    { background: var(--gray-light); color: var(--gray); border: 1px solid var(--gray-border); }
+
+.ks-chip {
+  display: flex; align-items: center; gap: 7px;
+  margin-top: 11px; padding: 8px 12px; border-radius: var(--radius-sm);
+  background: var(--gray-light); font-size: 12px; color: var(--slate-mid);
+  border-top: 1px dashed var(--gray-border);
+}
+
+/* ============================
+   PREP SECTION
+   ============================ */
+.prep-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 580px) { .prep-grid { grid-template-columns: 1fr 1fr; } }
+
+.prep-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-border); box-shadow: var(--shadow); overflow: hidden;
+}
+.prep-head {
+  padding: 12px 16px; font-size: 13px; font-weight: 700;
+  background: var(--gray-light); border-bottom: 1px solid var(--gray-border);
+  cursor: pointer; user-select: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.prep-body { padding: 4px 16px 12px; display: none; }
+.prep-body.on { display: block; }
+.ci {
+  display: flex; gap: 8px; padding: 7px 0;
+  border-bottom: 1px solid var(--gray-light); font-size: 13px; align-items: flex-start;
+}
+.ci:last-child { border-bottom: none; }
+.ci-icon { flex-shrink: 0; margin-top: 1px; }
+
+.tips-list { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+.tip {
+  display: flex; gap: 10px; align-items: flex-start;
+  background: var(--white); border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-border); padding: 11px 14px; font-size: 13px;
+}
+.tip-icon { font-size: 20px; flex-shrink: 0; line-height: 1.3; }
+
+/* ============================
+   BUDGET TABLE
+   ============================ */
+.budget-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-border); box-shadow: var(--shadow); overflow: hidden;
+}
+.budget-table { width: 100%; border-collapse: collapse; }
+.budget-table th {
+  text-align: left; padding: 10px 14px;
+  background: var(--gray-light); font-size: 11px;
+  text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray); font-weight: 700;
+  border-bottom: 1px solid var(--gray-border);
+}
+.budget-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-light); font-size: 13px; }
+.budget-table tr.total td { font-weight: 700; background: var(--blue-soft); border-top: 2px solid var(--blue-border); color: var(--blue); border-bottom: none; }
+.tbc { display: inline-block; padding: 2px 9px; border-radius: 7px; background: var(--amber-soft); color: var(--amber); font-size: 11px; font-weight: 700; border: 1px solid var(--amber-border); }
+.price { font-weight: 700; font-size: 13px; color: var(--text); }
+.note { font-size: 12px; color: var(--gray); }
+
+/* ============================
+   FOOTER
+   ============================ */
+.footer { text-align: center; padding: 20px; font-size: 11px; color: var(--gray); }
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (min-width: 768px) {
+  .hero { padding: 60px 24px 72px; }
+  .hero h1 { font-size: 34px; }
+  .wrap { padding: 32px 24px 80px; }
+}
 </style>
+</head>
+<body>
 
-<header class="hero"><span class="hero-flag">🇨🇳</span><h1>Trùng Khánh 2026</h1><p class="hero-dates">28 tháng 8 – 4 tháng 9, 2026 · Đoàn 4 Người</p><div class="hero-stats"><div class="stat"><div class="stat-num">8</div><div class="stat-lbl">Ngày</div></div><div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Người</div></div><div class="stat"><div class="stat-num">2</div><div class="stat-lbl">Khách Sạn</div></div><div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Chuyến Đi</div></div></div></header>
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <span class="hero-flag">🇨🇳</span>
+  <h1>Trùng Khánh 2026</h1>
+  <p class="hero-dates">28 tháng 8 – 4 tháng 9, 2026 · Đoàn 4 Người</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">8</div><div class="stat-lbl">Ngày</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Người</div></div>
+    <div class="stat"><div class="stat-num">2</div><div class="stat-lbl">Khách Sạn</div></div>
+    <div class="stat"><div class="stat-num">4</div><div class="stat-lbl">Chuyến Đi</div></div>
+  </div>
+</header>
 
-<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#transport">✈️ Di Chuyển</a><a class="nav-link" href="#hotels">🏨 Khách Sạn</a><a class="nav-link" href="#itinerary">📅 Lịch Trình</a><a class="nav-link" href="#prep">📋 Chuẩn Bị</a><a class="nav-link" href="#budget">💰 Chi Phí</a></div></nav>
+<!-- ==================== NAV ==================== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-link" href="#transport">✈️ Di Chuyển</a>
+    <a class="nav-link" href="#hotels">🏨 Khách Sạn</a>
+    <a class="nav-link" href="#itinerary">📅 Lịch Trình</a>
+    <a class="nav-link" href="#prep">📋 Chuẩn Bị</a>
+    <a class="nav-link" href="#budget">💰 Chi Phí</a>
+  </div>
+</nav>
 
+<!-- ==================== MAIN ==================== -->
 <div class="wrap">
-<section id="transport"><div class="sec-title">✈️ Di Chuyển</div><div class="grid-2">
-<div class="bp"><div class="bp-head flight">✈️ Chuyến bay đi</div><div class="bp-body"><div class="bp-side"><div class="bp-code">SGN</div><div class="bp-city">Tân Sơn Nhất</div></div><div class="bp-arrow-wrap"><div class="bp-time blue">23:20</div><div class="bp-arrow-line"></div><div class="bp-arrow-tip">›</div></div><div class="bp-side"><div class="bp-code">CKG</div><div class="bp-city">Trùng Khánh</div></div></div><hr class="bp-divider"><div class="bp-foot"><div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Sáu, 28/08/2026</div></div><div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">Bay đêm 🌙</div></div></div></div>
-<div class="bp"><div class="bp-head flight">✈️ Chuyến bay về</div><div class="bp-body"><div class="bp-side"><div class="bp-code">CKG</div><div class="bp-city">Trùng Khánh</div></div><div class="bp-arrow-wrap"><div class="bp-time blue">18:40</div><div class="bp-arrow-line"></div><div class="bp-arrow-tip">›</div></div><div class="bp-side"><div class="bp-code">SGN</div><div class="bp-city">Tân Sơn Nhất</div></div></div><hr class="bp-divider"><div class="bp-foot"><div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Sáu, 04/09/2026</div></div><div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">Bay chiều tối</div></div></div></div>
-<div class="bp"><div class="bp-head train">🚆 Tàu đi Vũ Long</div><div class="bp-body"><div class="bp-side"><div class="bp-code-sm">Chongqing<br>East Station</div><div class="bp-city">重庆东站</div></div><div class="bp-arrow-wrap"><div class="bp-time purple">08:00</div><div class="bp-arrow-line"></div><div class="bp-arrow-tip">›</div></div><div class="bp-side"><div class="bp-code-sm">Wulong<br>Station</div><div class="bp-city">武隆站</div></div></div><hr class="bp-divider"><div class="bp-foot"><div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Ba, 01/09/2026</div></div><div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">~2 tiếng 🌿</div></div></div></div>
-<div class="bp"><div class="bp-head train">🚆 Tàu về Trùng Khánh</div><div class="bp-body"><div class="bp-side"><div class="bp-code-sm">Wulong<br>Station</div><div class="bp-city">武隆站</div></div><div class="bp-arrow-wrap"><div class="bp-time purple">10:50</div><div class="bp-arrow-line"></div><div class="bp-arrow-tip">›</div></div><div class="bp-side"><div class="bp-code-sm">Chongqing<br>East Station</div><div class="bp-city">重庆东站</div></div></div><hr class="bp-divider"><div class="bp-foot"><div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Năm, 03/09/2026</div></div><div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">~2 tiếng</div></div></div></div>
-</div></section>
 
-<section id="hotels"><div class="sec-title">🏨 Khách Sạn</div><div class="grid-2">
-<div class="hotel"><div class="hotel-head"><div class="hotel-name">Mcsrh Hotel Chongqing<br>Jiefangbei Hongyadong</div><div class="hotel-loc">📍 Khu Giải Phóng Bi · Trùng Khánh</div></div><div class="hotel-body"><div class="hotel-row"><div class="hotel-lbl">Đêm lưu</div><div class="hotel-val">D1, D2, D3*, D6</div></div><div class="hotel-row"><div class="hotel-lbl">Check-in</div><div class="hotel-val">29/08/2026</div></div><div class="hotel-row"><div class="hotel-lbl">Ghi chú</div><div class="hotel-note">Gần Hồng Nhai Động và Jiefangbei. *D3 cần xác nhận.</div></div></div></div>
-<div class="hotel"><div class="hotel-head"><div class="hotel-name">White House Yuanjing Hotel</div><div class="hotel-loc">📍 Vũ Long (Wulong) · Trùng Khánh</div></div><div class="hotel-body"><div class="hotel-row"><div class="hotel-lbl">Đêm lưu</div><div class="hotel-val">D4, D5</div></div><div class="hotel-row"><div class="hotel-lbl">Check-in</div><div class="hotel-val">01/09/2026</div></div><div class="hotel-row"><div class="hotel-lbl">Ghi chú</div><div class="hotel-note">Gần Thiên Sinh Tam Kiều và Phù Dung Động.</div></div></div></div>
-</div></section>
+  <!-- DI CHUYỂN -->
+  <section id="transport">
+    <div class="sec-title">✈️ Di Chuyển</div>
+    <div class="grid-2">
 
-<section id="itinerary"><div class="sec-title">📅 Lịch Trình</div>
-<div class="day"><div class="day-head travel" onclick="toggleDay(this)"><div class="day-pill">D0</div><div class="day-meta"><div class="day-date">Thứ Sáu, 28/08/2026</div><div class="day-desc">Khởi hành · Bay đêm về Trùng Khánh</div></div><div class="day-tag">✈️ Bay đêm</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Tối</div><div class="sess-tags"><span class="tag travel">🕘 21:00 · Tập trung Sân Bay SGN</span></div></div><div class="session"><div class="sess-lbl">Đêm</div><div class="sess-tags"><span class="tag travel">✈️ 23:20 · SGN → CKG</span><span class="tag tbc">Ngủ trên máy bay</span></div></div><div class="ks-chip">🌙 Bay đêm – Nghỉ ngơi trên máy bay</div></div></div>
-<div class="day"><div class="day-head city" onclick="toggleDay(this)"><div class="day-pill">D1</div><div class="day-meta"><div class="day-date">Thứ Bảy, 29/08/2026</div><div class="day-desc">Trung tâm Trùng Khánh · Hồng Nhai Động</div></div><div class="day-tag">🏙 Jiefangbei</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Sáng</div><div class="sess-tags"><span class="tag city">Jiefangbei · Bia Giải Phóng 解放碑</span><span class="tag city">Luohan Temple · La Hán Tự 罗汉寺</span><span class="tag city">Raffles City 来福士</span></div></div><div class="session"><div class="sess-lbl">Chiều</div><div class="sess-tags"><span class="tag food">🏨 14:00 · Check-in Khách sạn</span><span class="tag tbc">Nghỉ trưa</span></div></div><div class="session"><div class="sess-lbl">Tối</div><div class="sess-tags"><span class="tag city">Hồng Nhai Động 红崖洞</span></div></div><div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div></div></div>
-<div class="day"><div class="day-head city" onclick="toggleDay(this)"><div class="day-pill">D2</div><div class="day-meta"><div class="day-date">Chủ Nhật, 30/08/2026</div><div class="day-desc">Lý Tử Bá · Sơn Thành Bộ Đạo · Quan Âm Kiều</div></div><div class="day-tag">🚃 Liziba</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Sáng</div><div class="sess-tags"><span class="tag city">Liziba · Lý Tử Bá 李子坝</span><span class="tag city">Shancheng · Sơn Thành Bộ Đạo 山城步道</span></div></div><div class="session"><div class="sess-lbl">Chiều</div><div class="sess-tags"><span class="tag tbc">TBC</span></div></div><div class="session"><div class="sess-lbl">Tối</div><div class="sess-tags"><span class="tag city">Guanyinqiao · Quan Âm Kiều 观音桥</span></div></div><div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div></div></div>
-<div class="day"><div class="day-head city" onclick="toggleDay(this)"><div class="day-pill">D3</div><div class="day-meta"><div class="day-date">Thứ Hai, 31/08/2026</div><div class="day-desc">Đại Túc Thạch Khắc (tentative)</div></div><div class="day-tag">🗿 Dazu</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Cả ngày</div><div class="sess-tags"><span class="tag city">Dazu Shike · Đại Túc Thạch Khắc 大足石刻</span><span class="tag tbc">⚠ Đang confirm – Tentative</span></div></div><div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div></div></div>
-<div class="day"><div class="day-head nature" onclick="toggleDay(this)"><div class="day-pill">D4</div><div class="day-meta"><div class="day-date">Thứ Ba, 01/09/2026</div><div class="day-desc">Tàu đi Vũ Long · Thiên Sinh Tam Kiều · Tiên Nữ Sơn</div></div><div class="day-tag">🌿 Vũ Long</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Sáng</div><div class="sess-tags"><span class="tag travel">🚆 08:00 · Tàu CQ East → Ga Wulong</span><span class="tag nature">Tiansheng Sanqiao · Thiên Sinh Tam Kiều 天生三桥</span></div></div><div class="session"><div class="sess-lbl">Chiều</div><div class="sess-tags"><span class="tag nature">Xiannvshan · Tiên Nữ Sơn Forest Park 仙女山</span></div></div><div class="ks-chip">🏨 White House Yuanjing Hotel · Vũ Long</div></div></div>
-<div class="day"><div class="day-head nature" onclick="toggleDay(this)"><div class="day-pill">D5</div><div class="day-meta"><div class="day-date">Thứ Tư, 02/09/2026</div><div class="day-desc">Phù Dung Động · Khám phá Vũ Long</div></div><div class="day-tag">🦋 Furong Dong</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Sáng</div><div class="sess-tags"><span class="tag food">🍜 Ăn sáng tại KS</span><span class="tag nature">Furong Dong · Phù Dung Động 芙蓉洞</span></div></div><div class="session"><div class="sess-lbl">Chiều</div><div class="sess-tags"><span class="tag tbc">TBC</span></div></div><div class="ks-chip">🏨 White House Yuanjing Hotel · Vũ Long</div></div></div>
-<div class="day"><div class="day-head city" onclick="toggleDay(this)"><div class="day-pill">D6</div><div class="day-meta"><div class="day-date">Thứ Năm, 03/09/2026</div><div class="day-desc">Trở về CQ · Long Môn Hào · Nam Tân Lộ</div></div><div class="day-tag">🏙 CQ Again</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Sáng</div><div class="sess-tags"><span class="tag travel">🚆 10:50 · Tàu Wulong → CQ East</span></div></div><div class="session"><div class="sess-lbl">Chiều</div><div class="sess-tags"><span class="tag city">Longmenhao · Long Môn Hào 龙门浩</span><span class="tag city">Danzishi · Đạn Tử Thạch 弹子石</span></div></div><div class="session"><div class="sess-lbl">Tối</div><div class="sess-tags"><span class="tag city">Nanbin Road · Nam Tân Lộ 南滨路</span></div></div><div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div></div></div>
-<div class="day"><div class="day-head travel" onclick="toggleDay(this)"><div class="day-pill">D7</div><div class="day-meta"><div class="day-date">Thứ Sáu, 04/09/2026</div><div class="day-desc">Bay về TP. Hồ Chí Minh · 18:40</div></div><div class="day-tag">✈️ Bay về</div><div class="chevron open">▾</div></div><div class="day-body on"><div class="session"><div class="sess-lbl">Sáng</div><div class="sess-tags"><span class="tag food">🍜 Ăn sáng tại KS</span><span class="tag tbc">Check-out · Chuẩn bị hành lý</span></div></div><div class="session"><div class="sess-lbl">Chiều</div><div class="sess-tags"><span class="tag tbc">TBC – Tự do trước chuyến bay</span></div></div><div class="session"><div class="sess-lbl">Tối</div><div class="sess-tags"><span class="tag travel">✈️ 18:40 · CKG → SGN</span></div></div><div class="ks-chip">✈️ Bay về nhà! Kết thúc chuyến đi 🎉</div></div></div>
-</section>
+      <!-- Bay đi -->
+      <div class="bp">
+        <div class="bp-head flight">✈️ Chuyến bay đi</div>
+        <div class="bp-body">
+          <div class="bp-side">
+            <div class="bp-code">SGN</div>
+            <div class="bp-city">Tân Sơn Nhất</div>
+          </div>
+          <div class="bp-arrow-wrap">
+            <div class="bp-time blue">23:20</div>
+            <div class="bp-arrow-line"></div>
+            <div class="bp-arrow-tip">›</div>
+          </div>
+          <div class="bp-side">
+            <div class="bp-code">CKG</div>
+            <div class="bp-city">Trùng Khánh</div>
+          </div>
+        </div>
+        <hr class="bp-divider">
+        <div class="bp-foot">
+          <div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Sáu, 28/08/2026</div></div>
+          <div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">Bay đêm 🌙</div></div>
+        </div>
+      </div>
 
-<section id="prep"><div class="sec-title">📋 Chuẩn Bị Trước Khi Đi</div>
-<div class="prep-grid">
-<div class="prep-card"><div class="prep-head" onclick="togglePrep(this)">🧳 Hành Lý <span>▴</span></div><div class="prep-body on"><div class="ci"><span class="ci-icon">☐</span><span>Quần áo nhẹ, thoáng – nóng 30–35°C cuối T8</span></div><div class="ci"><span class="ci-icon">☐</span><span>Giày đế bằng, thoải mái – leo bộ nhiều</span></div><div class="ci"><span class="ci-icon">☐</span><span>Ô nhỏ hoặc áo mưa mỏng</span></div><div class="ci"><span class="ci-icon">☐</span><span>Thuốc cá nhân, thuốc say tàu xe</span></div><div class="ci"><span class="ci-icon">⚠️</span><span>Pin sạc dự phòng phải có chứng nhận CC mới vào được Trung Quốc</span></div><div class="ci"><span class="ci-icon">☐</span><span>Đầu chuyển phích cắm</span></div><div class="ci"><span class="ci-icon">☐</span><span>Khăn giấy (khô + ướt)</span></div><div class="ci"><span class="ci-icon">🔲</span><span style="color:#94A3B8;font-style:italic">(còn bổ sung thêm)</span></div></div></div>
-<div class="prep-card"><div class="prep-head" onclick="togglePrep(this)">📄 Hồ Sơ Nhập Cảnh <span>▴</span></div><div class="prep-body on"><div class="ci"><span class="ci-icon">☐</span><span>Passport (hộ chiếu)</span></div><div class="ci"><span class="ci-icon">☐</span><span>Visa đoàn – bản in + bản PDF trên điện thoại</span></div><div class="ci"><span class="ci-icon">☐</span><span>Lịch trình – bản in + bản PDF trên điện thoại</span></div><div class="ci"><span class="ci-icon">☐</span><span>Xác nhận booking khách sạn – bản in + bản PDF trên điện thoại</span></div><div class="ci"><span class="ci-icon">☐</span><span>Vé máy bay 2 chiều – bản in + bản PDF trên điện thoại</span></div><div class="ci"><span class="ci-icon">🔲</span><span style="color:#94A3B8;font-style:italic">(còn bổ sung thêm)</span></div></div></div>
-<div class="prep-card"><div class="prep-head" onclick="togglePrep(this)">🇨🇳 Visa Đoàn – Hồ Sơ Cần Nộp <span>▴</span></div><div class="prep-body on"><div class="ci"><span class="ci-icon">☐</span><span>Mặt hộ chiếu còn hạn trên 6 tháng tính từ ngày trở về VN</span></div><div class="ci"><span class="ci-icon">☐</span><span>File hình thẻ nền trắng 4×6 (tự chụp bằng điện thoại được)</span></div><div class="ci"><span class="ci-icon">☐</span><span>Thông tin chuyến bay khứ hồi</span></div><div class="ci"><span class="ci-icon">☐</span><span>Tên khách sạn dự kiến</span></div></div></div>
-<div class="prep-card"><div class="prep-head" onclick="togglePrep(this)">📱 Apps Cần Tải Trước <span>▴</span></div><div class="prep-body on"><div class="ci"><span class="ci-icon">💬</span><span>WeChat – nhắn tin, thanh toán QR (setup thẻ quốc tế trước chuyến)</span></div><div class="ci"><span class="ci-icon">💳</span><span>Alipay – thanh toán QR thay thế (International version)</span></div><div class="ci"><span class="ci-icon">🚗</span><span>DiDi – gọi taxi/xe nội địa (như Grab của TQ)</span></div><div class="ci"><span class="ci-icon">🗺</span><span>Amap (Gaode Maps 高德地图) – navigate nội địa, chính xác tại TQ</span></div><div class="ci"><span class="ci-icon">🌐</span><span>Google Translate – tải offline bộ Trung Giản thể trước chuyến</span></div><div class="ci"><span class="ci-icon">🇻🇳</span><span>Zalo / Zalo Pay – liên lạc và chuyển tiền trong nhóm</span></div></div></div>
+      <!-- Bay về -->
+      <div class="bp">
+        <div class="bp-head flight">✈️ Chuyến bay về</div>
+        <div class="bp-body">
+          <div class="bp-side">
+            <div class="bp-code">CKG</div>
+            <div class="bp-city">Trùng Khánh</div>
+          </div>
+          <div class="bp-arrow-wrap">
+            <div class="bp-time blue">18:40</div>
+            <div class="bp-arrow-line"></div>
+            <div class="bp-arrow-tip">›</div>
+          </div>
+          <div class="bp-side">
+            <div class="bp-code">SGN</div>
+            <div class="bp-city">Tân Sơn Nhất</div>
+          </div>
+        </div>
+        <hr class="bp-divider">
+        <div class="bp-foot">
+          <div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Sáu, 04/09/2026</div></div>
+          <div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">Bay chiều tối</div></div>
+        </div>
+      </div>
+
+      <!-- Tàu đi Vũ Long -->
+      <div class="bp">
+        <div class="bp-head train">🚆 Tàu đi Vũ Long</div>
+        <div class="bp-body">
+          <div class="bp-side">
+            <div class="bp-code-sm">Chongqing<br>East Station</div>
+            <div class="bp-city">重庆东站</div>
+          </div>
+          <div class="bp-arrow-wrap">
+            <div class="bp-time purple">08:00</div>
+            <div class="bp-arrow-line"></div>
+            <div class="bp-arrow-tip">›</div>
+          </div>
+          <div class="bp-side">
+            <div class="bp-code-sm">Wulong<br>Station</div>
+            <div class="bp-city">武隆站</div>
+          </div>
+        </div>
+        <hr class="bp-divider">
+        <div class="bp-foot">
+          <div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Ba, 01/09/2026</div></div>
+          <div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">~2 tiếng 🌿</div></div>
+        </div>
+      </div>
+
+      <!-- Tàu về CQ -->
+      <div class="bp">
+        <div class="bp-head train">🚆 Tàu về Trùng Khánh</div>
+        <div class="bp-body">
+          <div class="bp-side">
+            <div class="bp-code-sm">Wulong<br>Station</div>
+            <div class="bp-city">武隆站</div>
+          </div>
+          <div class="bp-arrow-wrap">
+            <div class="bp-time purple">10:50</div>
+            <div class="bp-arrow-line"></div>
+            <div class="bp-arrow-tip">›</div>
+          </div>
+          <div class="bp-side">
+            <div class="bp-code-sm">Chongqing<br>East Station</div>
+            <div class="bp-city">重庆东站</div>
+          </div>
+        </div>
+        <hr class="bp-divider">
+        <div class="bp-foot">
+          <div class="bp-fi"><div class="bp-fl">Ngày</div><div class="bp-fv">Thứ Năm, 03/09/2026</div></div>
+          <div class="bp-fi"><div class="bp-fl">Ghi chú</div><div class="bp-fv">~2 tiếng</div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KHÁCH SẠN -->
+  <section id="hotels">
+    <div class="sec-title">🏨 Khách Sạn</div>
+    <div class="grid-2">
+
+      <div class="hotel">
+        <div class="hotel-head">
+          <div class="hotel-name">Mcsrh Hotel Chongqing<br>Jiefangbei Hongyadong</div>
+          <div class="hotel-loc">📍 Khu Giải Phóng Bi · Trùng Khánh</div>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-row">
+            <div class="hotel-lbl">Đêm lưu</div>
+            <div class="hotel-val">D1, D2, D3*, D6</div>
+          </div>
+          <div class="hotel-row">
+            <div class="hotel-lbl">Check-in</div>
+            <div class="hotel-val">29/08/2026</div>
+          </div>
+          <div class="hotel-row">
+            <div class="hotel-lbl">Ghi chú</div>
+            <div class="hotel-note">Gần Hồng Nhai Động và Jiefangbei. *D3 cần xác nhận thêm.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel">
+        <div class="hotel-head">
+          <div class="hotel-name">White House Yuanjing Hotel</div>
+          <div class="hotel-loc">📍 Vũ Long (Wulong) · Trùng Khánh</div>
+        </div>
+        <div class="hotel-body">
+          <div class="hotel-row">
+            <div class="hotel-lbl">Đêm lưu</div>
+            <div class="hotel-val">D4, D5</div>
+          </div>
+          <div class="hotel-row">
+            <div class="hotel-lbl">Check-in</div>
+            <div class="hotel-val">01/09/2026</div>
+          </div>
+          <div class="hotel-row">
+            <div class="hotel-lbl">Ghi chú</div>
+            <div class="hotel-note">Gần Thiên Sinh Tam Kiều và Phù Dung Động.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LỊCH TRÌNH -->
+  <section id="itinerary">
+    <div class="sec-title">📅 Lịch Trình</div>
+
+    <!-- D0 -->
+    <div class="day">
+      <div class="day-head travel" onclick="toggleDay(this)">
+        <div class="day-pill">D0</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Sáu, 28/08/2026</div>
+          <div class="day-desc">Khởi hành · Bay đêm về Trùng Khánh</div>
+        </div>
+        <div class="day-tag">✈️ Bay đêm</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Tối</div>
+          <div class="sess-tags">
+            <span class="tag travel">🕘 21:00 · Tập trung Sân Bay SGN</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Đêm</div>
+          <div class="sess-tags">
+            <span class="tag travel">✈️ 23:20 · SGN → CKG</span>
+            <span class="tag tbc">Ngủ trên máy bay</span>
+          </div>
+        </div>
+        <div class="ks-chip">🌙 Bay đêm – Nghỉ ngơi trên máy bay</div>
+      </div>
+    </div>
+
+    <!-- D1 -->
+    <div class="day">
+      <div class="day-head city" onclick="toggleDay(this)">
+        <div class="day-pill">D1</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Bảy, 29/08/2026</div>
+          <div class="day-desc">Trung tâm Trùng Khánh · Hồng Nhai Động</div>
+        </div>
+        <div class="day-tag">🏙 Jiefangbei</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Sáng</div>
+          <div class="sess-tags">
+            <span class="tag city">Jiefangbei · Bia Giải Phóng 解放碑</span>
+            <span class="tag city">Luohan Temple · La Hán Tự 罗汉寺</span>
+            <span class="tag city">Raffles City 来福士</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Chiều</div>
+          <div class="sess-tags">
+            <span class="tag food">🏨 14:00 · Check-in Khách sạn</span>
+            <span class="tag tbc">Nghỉ trưa</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Tối</div>
+          <div class="sess-tags">
+            <span class="tag city">Hồng Nhai Động 红崖洞</span>
+          </div>
+        </div>
+        <div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="day">
+      <div class="day-head city" onclick="toggleDay(this)">
+        <div class="day-pill">D2</div>
+        <div class="day-meta">
+          <div class="day-date">Chủ Nhật, 30/08/2026</div>
+          <div class="day-desc">Lý Tử Bá · Sơn Thành Bộ Đạo · Quan Âm Kiều</div>
+        </div>
+        <div class="day-tag">🚃 Liziba</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Sáng</div>
+          <div class="sess-tags">
+            <span class="tag city">Liziba · Lý Tử Bá 李子坝</span>
+            <span class="tag city">Shancheng · Sơn Thành Bộ Đạo 山城步道</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Chiều</div>
+          <div class="sess-tags">
+            <span class="tag tbc">TBC</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Tối</div>
+          <div class="sess-tags">
+            <span class="tag city">Guanyinqiao · Quan Âm Kiều 观音桥</span>
+          </div>
+        </div>
+        <div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="day">
+      <div class="day-head city" onclick="toggleDay(this)">
+        <div class="day-pill">D3</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Hai, 31/08/2026</div>
+          <div class="day-desc">Đại Túc Thạch Khắc (tentative)</div>
+        </div>
+        <div class="day-tag">🗿 Dazu</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Cả ngày</div>
+          <div class="sess-tags">
+            <span class="tag city">Dazu Shike · Đại Túc Thạch Khắc 大足石刻</span>
+            <span class="tag tbc">⚠ Đang confirm – Tentative</span>
+          </div>
+        </div>
+        <div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="day">
+      <div class="day-head nature" onclick="toggleDay(this)">
+        <div class="day-pill">D4</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Ba, 01/09/2026</div>
+          <div class="day-desc">Tàu đi Vũ Long · Thiên Sinh Tam Kiều · Tiên Nữ Sơn</div>
+        </div>
+        <div class="day-tag">🌿 Vũ Long</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Sáng</div>
+          <div class="sess-tags">
+            <span class="tag travel">🚆 08:00 · Tàu CQ East → Ga Wulong</span>
+            <span class="tag nature">Tiansheng Sanqiao · Thiên Sinh Tam Kiều 天生三桥</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Chiều</div>
+          <div class="sess-tags">
+            <span class="tag nature">Xiannvshan · Tiên Nữ Sơn National Forest Park 仙女山</span>
+          </div>
+        </div>
+        <div class="ks-chip">🏨 White House Yuanjing Hotel · Vũ Long</div>
+      </div>
+    </div>
+
+    <!-- D5 -->
+    <div class="day">
+      <div class="day-head nature" onclick="toggleDay(this)">
+        <div class="day-pill">D5</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Tư, 02/09/2026</div>
+          <div class="day-desc">Phù Dung Động · Khám phá Vũ Long</div>
+        </div>
+        <div class="day-tag">🦋 Furong Dong</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Sáng</div>
+          <div class="sess-tags">
+            <span class="tag food">🍜 Ăn sáng tại Khách sạn</span>
+            <span class="tag nature">Furong Dong · Phù Dung Động 芙蓉洞</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Chiều</div>
+          <div class="sess-tags">
+            <span class="tag tbc">TBC</span>
+          </div>
+        </div>
+        <div class="ks-chip">🏨 White House Yuanjing Hotel · Vũ Long</div>
+      </div>
+    </div>
+
+    <!-- D6 -->
+    <div class="day">
+      <div class="day-head city" onclick="toggleDay(this)">
+        <div class="day-pill">D6</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Năm, 03/09/2026</div>
+          <div class="day-desc">Trở về CQ · Long Môn Hào · Nam Tân Lộ</div>
+        </div>
+        <div class="day-tag">🏙 CQ Again</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Sáng</div>
+          <div class="sess-tags">
+            <span class="tag travel">🚆 10:50 · Tàu Ga Wulong → CQ East</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Chiều</div>
+          <div class="sess-tags">
+            <span class="tag city">Longmenhao · Long Môn Hào 龙门浩</span>
+            <span class="tag city">Danzishi · Đạn Tử Thạch 弹子石</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Tối</div>
+          <div class="sess-tags">
+            <span class="tag city">Nanbin Road · Nam Tân Lộ 南滨路</span>
+          </div>
+        </div>
+        <div class="ks-chip">🏨 Mcsrh Hotel · Jiefangbei Hongyadong</div>
+      </div>
+    </div>
+
+    <!-- D7 -->
+    <div class="day">
+      <div class="day-head travel" onclick="toggleDay(this)">
+        <div class="day-pill">D7</div>
+        <div class="day-meta">
+          <div class="day-date">Thứ Sáu, 04/09/2026</div>
+          <div class="day-desc">Bay về TP. Hồ Chí Minh · 18:40</div>
+        </div>
+        <div class="day-tag">✈️ Bay về</div>
+        <div class="chevron open">▾</div>
+      </div>
+      <div class="day-body on">
+        <div class="session">
+          <div class="sess-lbl">Sáng</div>
+          <div class="sess-tags">
+            <span class="tag food">🍜 Ăn sáng tại Khách sạn</span>
+            <span class="tag tbc">Check-out · Chuẩn bị hành lý</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Chiều</div>
+          <div class="sess-tags">
+            <span class="tag tbc">TBC – Tự do trước chuyến bay</span>
+          </div>
+        </div>
+        <div class="session">
+          <div class="sess-lbl">Tối</div>
+          <div class="sess-tags">
+            <span class="tag travel">✈️ 18:40 · CKG → SGN</span>
+          </div>
+        </div>
+        <div class="ks-chip">✈️ Bay về nhà! Kết thúc chuyến đi 🎉</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CHUẨN BỊ -->
+  <section id="prep">
+    <div class="sec-title">📋 Chuẩn Bị Trước Khi Đi</div>
+
+    <div class="prep-grid">
+
+      <div class="prep-card">
+        <div class="prep-head" onclick="togglePrep(this)">🧳 Hành Lý <span>▴</span></div>
+        <div class="prep-body on">
+          <div class="ci"><span class="ci-icon">☐</span><span>Quần áo nhẹ, thoáng – nóng 30–35°C cuối T8</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Giày đế bằng, thoải mái – leo bộ nhiều</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Ô nhỏ hoặc áo mưa mỏng</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Thuốc cá nhân, thuốc say tàu xe</span></div>
+          <div class="ci"><span class="ci-icon">⚠️</span><span>Pin sạc dự phòng phải có chứng nhận CC mới vào được Trung Quốc</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Đầu chuyển phích cắm</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Khăn giấy (khô + ướt)</span></div>
+          <div class="ci"><span class="ci-icon">🔲</span><span style="color:#94A3B8;font-style:italic">(còn bổ sung thêm)</span></div>
+        </div>
+      </div>
+
+      <div class="prep-card">
+        <div class="prep-head" onclick="togglePrep(this)">📄 Hồ Sơ Nhập Cảnh <span>▴</span></div>
+        <div class="prep-body on">
+          <div class="ci"><span class="ci-icon">☐</span><span>Passport (hộ chiếu)</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Visa đoàn – bản in + bản PDF trên điện thoại</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Lịch trình – bản in + bản PDF trên điện thoại</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Xác nhận booking khách sạn – bản in + bản PDF trên điện thoại</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Vé máy bay 2 chiều – bản in + bản PDF trên điện thoại</span></div>
+          <div class="ci"><span class="ci-icon">🔲</span><span style="color:#94A3B8;font-style:italic">(còn bổ sung thêm)</span></div>
+        </div>
+      </div>
+
+      <div class="prep-card">
+        <div class="prep-head" onclick="togglePrep(this)">🇨🇳 Visa Đoàn – Hồ Sơ Cần Nộp <span>▴</span></div>
+        <div class="prep-body on">
+          <div class="ci"><span class="ci-icon">☐</span><span>Mặt hộ chiếu còn hạn trên 6 tháng tính từ ngày trở về VN</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>File hình thẻ nền trắng 4×6 (tự chụp bằng điện thoại được)</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Thông tin chuyến bay khứ hồi</span></div>
+          <div class="ci"><span class="ci-icon">☐</span><span>Tên khách sạn dự kiến</span></div>
+        </div>
+      </div>
+
+      <div class="prep-card">
+        <div class="prep-head" onclick="togglePrep(this)">📱 Apps Cần Tải Trước <span>▴</span></div>
+        <div class="prep-body on">
+          <div class="ci"><span class="ci-icon">💬</span><span>WeChat – nhắn tin, thanh toán QR (setup thẻ quốc tế trước chuyến)</span></div>
+          <div class="ci"><span class="ci-icon">💳</span><span>Alipay – thanh toán QR thay thế (International version)</span></div>
+          <div class="ci"><span class="ci-icon">🚗</span><span>DiDi – gọi taxi/xe nội địa (như Grab của TQ)</span></div>
+          <div class="ci"><span class="ci-icon">🗺</span><span>Amap (Gaode Maps 高德地图) – navigate nội địa, chính xác tại TQ</span></div>
+          <div class="ci"><span class="ci-icon">🌐</span><span>Google Translate – tải offline bộ Trung Giản thể trước chuyến</span></div>
+          <div class="ci"><span class="ci-icon">🇻🇳</span><span>Zalo / Zalo Pay – liên lạc và chuyển tiền trong nhóm</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- TIPS -->
+    <div style="margin-top:20px">
+      <div class="sec-title" style="margin-top:0">💡 Tips Thực Tế</div>
+      <div class="tips-list">
+        <div class="tip"><div class="tip-icon">💴</div><div>Đổi CNY trước ở VN hoặc tại sân bay. TQ dùng cashless QR rất phổ biến — setup WeChat Pay hoặc Alipay International trước chuyến đi sẽ tiện hơn nhiều. Vẫn nên có cash dự phòng.</div></div>
+        <div class="tip"><div class="tip-icon">🌡️</div><div>Thời tiết cuối tháng 8 – đầu tháng 9 tại Trùng Khánh: 30–35°C, rất ẩm, có thể mưa rào buổi chiều. Mặc đồ thoáng nhẹ, mang ô nhỏ.</div></div>
+        <div class="tip"><div class="tip-icon">🔒</div><div>Bật VPN <strong>trước khi máy bay hạ cánh</strong> để dùng Google Maps, WhatsApp, Facebook liên tục. Kiểm tra VPN hoạt động tốt ở TQ trước khi đi (thử trên 4G).</div></div>
+        <div class="tip"><div class="tip-icon">🍜</div><div>Trùng Khánh nổi tiếng lẩu cay Hotpot và <strong>Xiaomian 小面</strong> (mì cay địa phương). Xiaomian rẻ, ngon, authentic – nên thử ít nhất 2–3 lần.</div></div>
+        <div class="tip"><div class="tip-icon">🚇</div><div>Metro Trùng Khánh (chongqing rail transit) rẻ, hiệu quả và khá thú vị (có đoạn chạy qua nhà!). Dùng Alipay quét cổng trực tiếp, hoặc mua thẻ giao thông 1 lần tại cổng soát vé.</div></div>
+        <div class="tip"><div class="tip-icon">📸</div><div>Hồng Nhai Động đẹp nhất sau 7pm. Liziba – Lý Tử Bá (tàu điện xuyên nhà) nên đến sáng sớm hoặc chiều tối 5–6pm để tránh đông người và ánh sáng tốt hơn cho ảnh.</div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CHI PHÍ ƯỚC TÍNH -->
+  <section id="budget">
+    <div class="sec-title">💰 Chi Phí Ước Tính</div>
+    <div class="budget-card">
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Hạng Mục</th>
+            <th>Ước Tính</th>
+            <th>Ghi Chú</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Visa đoàn</td>
+            <td><span class="price">2.000.000 ₫</span></td>
+            <td class="note">/người</td>
+          </tr>
+          <tr>
+            <td>Vé máy bay (khứ hồi)</td>
+            <td><span class="price">9.000.000 ₫</span></td>
+            <td class="note">/người · SGN ↔ CKG</td>
+          </tr>
+          <tr>
+            <td>Khách sạn (~6 đêm, chia 2 phòng)</td>
+            <td><span class="price">3.000.000 ₫</span></td>
+            <td class="note">/người · Mcsrh + White House</td>
+          </tr>
+          <tr>
+            <td>Vé tàu Chongqing – Wulong (2 chiều)</td>
+            <td><span class="price">1.000.000 ₫</span></td>
+            <td class="note">/người</td>
+          </tr>
+          <tr>
+            <td>Ăn uống (~7 ngày)</td>
+            <td><span class="price">3.000.000 ₫</span></td>
+            <td class="note">/người</td>
+          </tr>
+          <tr>
+            <td>Di chuyển nội địa (metro, DiDi)</td>
+            <td><span class="price">1.000.000 ₫</span></td>
+            <td class="note">/người</td>
+          </tr>
+          <tr>
+            <td>Vé tham quan (Dazu, Tiansheng, Furong Dong...)</td>
+            <td><span class="price">1.000.000 ₫</span></td>
+            <td class="note">/người</td>
+          </tr>
+          <tr>
+            <td>Dự phòng</td>
+            <td><span class="price">2.000.000 ₫</span></td>
+            <td class="note">/người</td>
+          </tr>
+          <tr class="total">
+            <td>💰 TỔNG ƯỚC TÍNH / người</td>
+            <td><span style="font-size:15px;font-weight:800;color:var(--blue)">22.000.000 ₫</span></td>
+            <td class="note" style="color:var(--blue)">≈ ~880 CNY · ~880 USD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
 </div>
-<div style="margin-top:18px"><div class="sec-title" style="margin-top:0">💡 Tips Thực Tế</div>
-<div class="tips-list">
-<div class="tip"><div class="tip-icon">💴</div><div>Đổi CNY trước ở VN hoặc tại sân bay. TQ dùng cashless QR rất phổ biến — setup WeChat Pay hoặc Alipay International trước chuyến đi. Vẫn nên có ít cash dự phòng.</div></div>
-<div class="tip"><div class="tip-icon">🌡️</div><div>Thời tiết cuối T8 – đầu T9 tại Trùng Khánh: 30–35°C, rất ẩm, có thể mưa rào buổi chiều. Đồ thoáng nhẹ + ô nhỏ là đủ.</div></div>
-<div class="tip"><div class="tip-icon">🔒</div><div>Bật VPN <strong>trước khi máy bay hạ cánh</strong> để dùng Google Maps, WhatsApp, Facebook liên tục. Kiểm tra VPN hoạt động ổn tại TQ trước khi lên đường.</div></div>
-<div class="tip"><div class="tip-icon">🍜</div><div>Trùng Khánh nổi tiếng lẩu cay Hotpot và <strong>Xiaomian 小面</strong> (mì cay địa phương). Xiaomian rẻ, ngon, rất authentic – nên thử ít nhất 2–3 lần trong chuyến.</div></div>
-<div class="tip"><div class="tip-icon">🚇</div><div>Metro Trùng Khánh rẻ và hiệu quả (có đoạn chạy qua nhà!). Dùng Alipay quét cổng trực tiếp, hoặc mua thẻ giao thông 1 lần.</div></div>
-<div class="tip"><div class="tip-icon">📸</div><div>Hồng Nhai Động đẹp nhất sau 7pm. Liziba – Lý Tử Bá (tàu điện xuyên nhà) nên đến sáng sớm hoặc chiều tối 5–6pm để tránh đông người.</div></div>
-</div></div></section>
 
-<section id="budget"><div class="sec-title">💰 Chi Phí Ước Tính</div>
-<div class="budget-card"><table class="budget-table">
-<thead><tr><th>Hạng Mục</th><th>Ước Tính / người</th><th>Ghi Chú</th></tr></thead>
-<tbody>
-<tr><td>Visa đoàn</td><td><span class="price">2.000.000 ₫</span></td><td class="note"></td></tr>
-<tr><td>Vé máy bay (khứ hồi)</td><td><span class="price">9.000.000 ₫</span></td><td class="note">SGN ↔ CKG</td></tr>
-<tr><td>Khách sạn (~6 đêm, chia 2 phòng)</td><td><span class="price">3.000.000 ₫</span></td><td class="note">Mcsrh + White House</td></tr>
-<tr><td>Vé tàu Chongqing – Wulong (2 chiều)</td><td><span class="price">1.000.000 ₫</span></td><td class="note"></td></tr>
-<tr><td>Ăn uống (~7 ngày)</td><td><span class="price">3.000.000 ₫</span></td><td class="note"></td></tr>
-<tr><td>Di chuyển nội địa (metro, DiDi)</td><td><span class="price">1.000.000 ₫</span></td><td class="note"></td></tr>
-<tr><td>Vé tham quan</td><td><span class="price">1.000.000 ₫</span></td><td class="note">Dazu, Tiansheng, Furong Dong...</td></tr>
-<tr><td>Dự phòng</td><td><span class="price">2.000.000 ₫</span></td><td class="note"></td></tr>
-<tr class="total"><td>💰 TỔNG / người</td><td><span style="font-size:15px;font-weight:800;color:var(--blue)">22.000.000 ₫</span></td><td class="note" style="color:var(--blue)">≈ ~880 CNY</td></tr>
-</tbody>
-</table></div></section>
+<div class="footer">
+  🇨🇳 Trùng Khánh 2026 · Đoàn 4 Người · Cập nhật: 10/06/2026 (v3)
 </div>
-
-<div class="footer">🇨🇳 Trùng Khánh 2026 · Đoàn 4 Người · Cập nhật: 10/06/2026 (v3)</div>
 
 <script>
-function toggleDay(h){const b=h.nextElementSibling,c=h.querySelector('.chevron'),o=b.classList.contains('on');b.classList.toggle('on',!o);c.classList.toggle('open',!o)}
-function togglePrep(h){const b=h.nextElementSibling,a=h.querySelector('span:last-child'),o=b.classList.contains('on');b.classList.toggle('on',!o);a.textContent=o?'▾':'▴'}
+  function toggleDay(head) {
+    const body = head.nextElementSibling;
+    const ch   = head.querySelector('.chevron');
+    const open = body.classList.contains('on');
+    body.classList.toggle('on', !open);
+    ch.classList.toggle('open', !open);
+  }
+
+  function togglePrep(head) {
+    const body   = head.nextElementSibling;
+    const arrow  = head.querySelector('span:last-child');
+    const open   = body.classList.contains('on');
+    body.classList.toggle('on', !open);
+    arrow.textContent = open ? '▾' : '▴';
+  }
 </script>
+</body>
+</html>
